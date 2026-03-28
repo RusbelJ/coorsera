@@ -5,11 +5,29 @@ body {
 }
 
 header {
+  display: grid;
+  grid-template-columns: 80% 20%;
   background-color: gray;
 }
 
+header a {
+  grid-column: 1 / -1;
+}
+
 nav {
+  display: inline-block;
+  width: 100%;
   background-color: rgb(11, 219, 11);
+}
+
+nav ul{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.fotoprincipal{
+  height: 80px;
+  width: 100%;
 }
 
 main {
@@ -17,24 +35,33 @@ main {
   font-size: 100%;
 }
 
+main div {
+  display: grid;
+  grid-template-columns: 1fr 1fr ;
+  place-items: center;
+}
+
+main div img {
+  height: 50%;
+  width: 50%;
+}
+
+
 footer {
   background-color: gray;
 }
 
-li {
+/* li {
   display: inline-block;
   width: 20%;
-}
+} */
 
 h1 {
   text-align: center;
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: aliceblue;
-}
-
-.fotoprincipal {
-  display: block;
-  margin: 0 auto;
+  grid-column: 1 / -1;
+  margin: 10px;
 }
 
 p {
